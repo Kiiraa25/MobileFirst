@@ -1,0 +1,37 @@
+.header{
+    background-color: 00ced1 ;
+    height: 50px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.container{
+    display: flex;
+    border: 3px white solid;
+}
+
+.aside{
+    background-color: 6b8e23;
+    height: 130px;
+    width: 40%;
+    text-align: center;
+    padding-top: 130px;
+    border-right: 3px white solid;
+   
+}
+
+.main{
+    background-color: db7093;
+    height: 130px;
+    width: 60%;
+    text-align: center;
+    padding-top: 130px;
+   
+}
+
+.footer{
+    background-color: 696969;
+    height: 50px;
+    text-align: center;
+    padding-top: 25px;
+}

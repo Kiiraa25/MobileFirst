@@ -1,0 +1,67 @@
+body {
+    background-color: f5d04e;
+    width: 1100px;
+    margin: auto;
+    padding-top: 250px;
+    font-family: Figtree Light;
+    font-size: 13px;
+}
+
+.container {
+    align-items: center;
+    margin: auto;
+    width: 280px;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 7px 7px 0px;
+}
+
+.container-img , .container-button {
+    margin-bottom: 20px;
+}
+
+.container-img img {
+    width: 280px;
+    border-radius: 15px;
+}
+
+.container-button button {
+    background-color: f4d149;
+    border-radius: 2px;
+    border-style: none;
+    font-weight: bold;
+    padding: 5px;
+    width: 70px;
+    font-family: Figtree ExtraBold;
+}
+
+.container-title {
+    font-size: 23px;
+    font-family: Figtree ExtraBold;
+    font-weight: bold;
+}
+
+.container-text {
+    color: rgb(141, 135, 135);
+}
+
+.container-autor {
+    display: flex;
+    margin-top: 20px;
+}
+
+.container-autor img {
+    width: 40px;
+
+}
+
+.container-autor-name {
+    display: flex;
+    align-self: center;
+    padding-left: 10px;
+    font-weight: bold;
+    font-family: Figtree ExtraBold;
+    font-size: 13px;
+}

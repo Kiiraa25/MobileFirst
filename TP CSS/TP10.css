@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: rgb(255, 226, 208);
+
+}
+
+.article {
+    border: 2px black solid;
+    width: 500px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    background-color: white;
+}
+
+.image {
+    display: flex;
+    justify-content: flex-start;
+    height: 200px;
+}
+
+.texte {
+    margin-left: 35;
+}
+
+p {
+    color: orange;
+}

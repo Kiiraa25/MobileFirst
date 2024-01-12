@@ -1,0 +1,98 @@
+
+@font-face {
+    font-family: Inter;
+    src: url(https://fonts.google.com/specimen/Inter);
+}
+
+@font-face {
+    font-family: Lexend Deca;
+    src: url(https://fonts.google.com/specimen/Lexend+Deca);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(15, 14, 29);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    
+    width: 760px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+h1{
+    font-size: 31px;
+    font-family: Inter;
+}
+
+.banner-left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+    background-color: rgba(37, 35, 59, 0.64);
+    padding: 30px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.banner-left-side h1{
+    width: 290px;
+}
+
+.banner-left-side .title-word-style{
+    display: inline;
+    color: rgb(155, 110, 168);
+}
+
+.banner-left-side-content{
+    width: 280px;
+    color: rgba(211, 211, 211, 0.759);
+    margin-bottom: 40px;
+    margin-top: 5px;
+    font-family: Inter;
+    font-size: 13px;
+}
+
+.banner-left-side-numbers{
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+
+}
+
+.number{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.number + div{
+    color: rgba(211, 211, 211, 0.759);
+    font-size: 10px;
+}
+
+.banner-right-side{
+    display: flex;
+    width: 380px;
+    height: 300.531px;
+    background-image: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.violet-filter{
+    width: 100%;
+    background-color: rgba(100, 49, 147, 0.532);
+}
