@@ -1,14 +1,4 @@
 
-@font-face {
-    font-family: Inter;
-    src: url(https://fonts.google.com/specimen/Inter);
-}
-
-@font-face {
-    font-family: Lexend Deca;
-    src: url(https://fonts.google.com/specimen/Lexend+Deca);
-}
-
 body{
     display: flex;
     justify-content: center;
@@ -34,7 +24,7 @@ body{
 }
 
 h1{
-    font-size: 31px;
+    font-size: 27px;
     font-family: Inter;
 }
 
@@ -63,7 +53,7 @@ h1{
     margin-bottom: 40px;
     margin-top: 5px;
     font-family: Inter;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .banner-left-side-numbers{
@@ -75,12 +65,15 @@ h1{
 
 .number{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
+    font-family: Lexend Deca;
+
 }
 
 .number + div{
     color: rgba(211, 211, 211, 0.759);
     font-size: 10px;
+    font-family: Lexend Deca;
 }
 
 .banner-right-side{
