@@ -10,6 +10,11 @@
     .navbar-brand img {
       width: 100px;
     }
+
+    p{
+      text-align: justify;
+    }
+
   </style>
 </head>
 
@@ -31,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Gallery</a>
+              <a class="nav-link active" href="#menu">Menu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Contact</a>
+              <a class="nav-link active" href="Contact.html" target="_blank">Contact</a>
 
         </div>
       </div>
@@ -49,12 +54,38 @@
   <!--  Start main -->
 
 
-  <h1 class="text-center mb-4 mt-5"> Mobile First</h1>
+
 
   <main class="container-fluid">
-
+    <h1 class="text-center mb-5 mt-5"> Mobile First</h1>
     <section class="home mb-4 mt-5">
       <h2 class="mb-4"> Home</h2>
+
+      <!-- Carrousel -->
+
+      <div id="carouselExample" class="carousel slide mb-4">
+        <div class="carousel-inner">
+          <div class="carousel-item active active">
+            <img src="img/cramen1.jpg" class="d-block w-100" alt="ramen1">
+          </div>
+          <div class="carousel-item active">
+            <img src="img/cramen2.jpg" class="d-block w-100" alt="ramen2">
+          </div>
+          <div class="carousel-item active">
+            <img src="img/cramen3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officia recusandae minima enim saepe dolorem,
         fugiat, vel esse sunt tenetur hic, suscipit aspernatur. Consectetur, vel maiores quia voluptas impedit, saepe
@@ -70,39 +101,80 @@
       </p>
     </section>
 
-    <section class="gallery mb-4 mt-5">
-      <h2 class="mb-4"> Gallery</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officia recusandae minima enim saepe dolorem,
-        fugiat, vel esse sunt tenetur hic, suscipit aspernatur. Consectetur, vel maiores quia voluptas impedit, saepe
-        reprehenderit enim nihil obcaecati recusandae facere aspernatur deleniti consequatur. Hic maxime voluptates
-        culpa fuga omnis, atque ut architecto voluptatibus, iusto laboriosam nemo. Possimus temporibus aliquid odio qui
-        sapiente eveniet doloribus ullam nemo, repellendus culpa natus facilis laudantium ipsum? Repellat fuga
-        veritatis, modi et, ipsam expedita error facere sunt illum quibusdam consequatur ut sapiente? Sapiente
-        architecto vel perferendis porro exercitationem optio mollitia doloribus excepturi perspiciatis laudantium
-        assumenda nostrum laboriosam rerum nulla quo quisquam accusamus, totam provident? Voluptas deleniti iure quod
-        harum quisquam, aliquam culpa porro nemo quis maxime. Quae culpa, reiciendis, corporis sapiente similique
-        recusandae non est odit, odio animi inventore. Ut minus cumque veniam sapiente quae, voluptate ullam ea tempore
-        facere labore unde veritatis repellat perferendis doloribus soluta temporibus tenetur.
-      </p>
+
+    <!-- gallery -->
+
+
+    <section class="mb-5 mt-4 row" id="menu">
+      <h2 class="mb-4">Menu</h2>
+
+      <div class="col-12 col-md-4 text-center">
+        <div class="card mb-4">
+          <img src="img/cramen1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Shoyu Ramen</h5>
+            <p class="card-text">Ramen Bowl whith chicken</p>
+            <a href="#" class="btn btn-primary">Try it</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <div class="card mb-4">
+          <img src="img/cramen2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Shio Ramen</h5>
+            <p class="card-text">Ramen Bowl whith pork</p>
+            <a href="#" class="btn btn-primary">Try it</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <div class="card mb-4">
+          <img src="img/cramen3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Yoshiki Ramen</h5>
+            <p class="card-text">Ramen Bowl whith duck</p>
+            <a href="#" class="btn btn-primary">Try it</a>
+          </div>
+        </div>
+
+      </div>
     </section>
+
+
+<!-- contact -->
+
 
     <section class="contact mb-4 mt-5">
-      <h2 class="mb-4"> Contact</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officia recusandae minima enim saepe dolorem,
-        fugiat, vel esse sunt tenetur hic, suscipit aspernatur. Consectetur, vel maiores quia voluptas impedit, saepe
-        reprehenderit enim nihil obcaecati recusandae facere aspernatur deleniti consequatur. Hic maxime voluptates
-        culpa fuga omnis, atque ut architecto voluptatibus, iusto laboriosam nemo. Possimus temporibus aliquid odio qui
-        sapiente eveniet doloribus ullam nemo, repellendus culpa natus facilis laudantium ipsum? Repellat fuga
-        veritatis, modi et, ipsam expedita error facere sunt illum quibusdam consequatur ut sapiente? Sapiente
-        architecto vel perferendis porro exercitationem optio mollitia doloribus excepturi perspiciatis laudantium
-        assumenda nostrum laboriosam rerum nulla quo quisquam accusamus, totam provident? Voluptas deleniti iure quod
-        harum quisquam, aliquam culpa porro nemo quis maxime. Quae culpa, reiciendis, corporis sapiente similique
-        recusandae non est odit, odio animi inventore. Ut minus cumque veniam sapiente quae, voluptate ullam ea tempore
-        facere labore unde veritatis repellat perferendis doloribus soluta temporibus tenetur.
-      </p>
+      
+      <div class="contactform mb-5">
+        <h2 class="mb-4"> Contact us</h2>
+        <div class="mb-3 w-100">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 w-100">
+          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="button" class="btn btn-danger">Submit</button>
+      </div>
+
+      <div>
+        <h2>Find us</h2>
+        <br>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10498.314912724216!2d2.3356021!3d48.8662431!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e0cc0a699d%3A0x9171b3e2fcc449ef!2sKadoya!5e0!3m2!1sfr!2sfr!4v1705070469546!5m2!1sfr!2sfr"
+          width="420" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
     </section>
+
   </main>
 
 
@@ -111,7 +183,9 @@
   <footer class="bg-danger text-white mt-5">
     <div class="p-4 text-center">CCI Lyon</div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
