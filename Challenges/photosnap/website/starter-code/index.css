@@ -1,0 +1,114 @@
+
+
+/* Body Style */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+font-size: 40px;
+letter-spacing: 4.17px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+h4{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+
+
+/* Header */
+
+header{
+    height: 72px;
+    width: 1440px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 269px;
+}
+
+.links a{
+   color: black;
+}
+
+.button button{
+    background-color: black;
+    width: 157.89px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+
+
+/* Main */
+
+main{
+    display: grid;
+    background-color: red;
+    width: 1440px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: calc(100vh / 3);
+}
+
+.box1{
+background-color: black;
+color: white;
+grid-area: 1/1/1/4;
+}
+
+.box2{
+    grid-area: 1/4/1/8;
+/* grid-column: 4 / span 4; */
+background-color: rgb(37, 12, 150);
+}
+
+.box3{
+    background-color: yellow;
+    grid-area: 2/1/2/5;
+}
+
+.box4{
+    background-color: pink;
+    grid-area: 2/5/2/8;
+}
+
+.box5{
+    background-color: aqua;
+    grid-area: 3/1/3/4;
+}
+
+.box6{
+    background-color: burlywood;
+    grid-area: 3/4/3/8;
+}
