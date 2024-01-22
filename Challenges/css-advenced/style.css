@@ -1,0 +1,40 @@
+.container {
+    position: absolute;
+    z-index: 1;
+}
+
+
+.first {
+position: absolute;
+right: 0;
+transform: translateX(100%);
+}
+
+.fourth {
+position: absolute;
+transform: scale(2, 2);
+top: 0;
+right: 0;
+transform-origin: top right;
+z-index: 1;
+}
+
+
+.second-container {
+z-index: -1;
+position: relative;
+top: 0;
+}
+
+.container::after{
+position: absolute;
+content: attr(data-descr);
+content: "This line";
+width: 100%;
+height: 45px;
+background-color: red;
+bottom: 0;
+font-weight: bold;
+font-size: 22px;
+
+}

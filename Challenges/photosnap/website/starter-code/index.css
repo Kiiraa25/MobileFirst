@@ -1,38 +1,45 @@
-
-
 /* Body Style */
 
-body{
+body {
     margin: 0px;
     padding: 0px;
-    width: 100%;
-    height: 100vh;
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
+    line-height: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1{
-font-size: 40px;
-letter-spacing: 4.17px;
+h1 {
+    font-size: 40px;
+    letter-spacing: 4.17px;
+    line-height: 48px;
+    width: 387px;
+    margin: 0px;
+    padding: 0;
 }
 
-h2{
+h2 {
     font-size: 24px;
+    margin: 0;
+    padding: 0;
 }
 
-h3{
+h3 {
     font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
-h4{
+h4 {
     font-size: 12px;
     letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
 }
 
-a{
+a {
     color: unset;
     text-decoration: none;
 }
@@ -40,7 +47,7 @@ a{
 
 /* Header */
 
-header{
+header {
     height: 72px;
     width: 1440px;
     display: flex;
@@ -48,17 +55,17 @@ header{
     align-items: center;
 }
 
-.links{
+.links {
     display: flex;
     justify-content: space-between;
     width: 269px;
 }
 
-.links a{
-   color: black;
+.links a {
+    color: black;
 }
 
-.button button{
+.button button {
     background-color: black;
     width: 157.89px;
     height: 40px;
@@ -71,44 +78,241 @@ header{
 
 
 
-/* Main */
+/* top grid */
 
-main{
+.top-grid {
     display: grid;
-    background-color: red;
     width: 1440px;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: calc(100vh / 3);
+    height: 1850px;
+    grid-template-columns: minmax(610px, 830px);
+    grid-template-rows: 650px 600px 600px;
 }
 
-.box1{
-background-color: black;
-color: white;
-grid-area: 1/1/1/4;
+.box1 {
+    background-color: black;
+    height: 650px;
+    width: 610px;
+    grid-area: 1/1/1/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.box2{
+
+.box1 .box-container {
+    width: 387px;
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.black-box-content {
+    height: 75px;
+    line-height: 25px;
+    color: rgba(249, 249, 249, 0.6);
+
+}
+
+.box-button {
+    border: none;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 168px;
+    text-align: left;
+    padding: 0px;
+    height: 16px;
+
+}
+
+
+
+.box2 {
     grid-area: 1/4/1/8;
-/* grid-column: 4 / span 4; */
-background-color: rgb(37, 12, 150);
+    /* grid-column: 4 / span 4; */
+    background-image: url(assets/home/desktop/create-and-share.jpg);
+    width: 830px;
 }
 
-.box3{
-    background-color: yellow;
+.white-filter {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.44);
+}
+
+.box3 {
+    background-image: url(assets/home/desktop/beautiful-stories.jpg);
     grid-area: 2/1/2/5;
+    width: 830px;
 }
 
-.box4{
-    background-color: pink;
+
+/* box 4 */
+.box4 {
+    background-color: white;
     grid-area: 2/5/2/8;
+    width: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
-.box5{
-    background-color: aqua;
+.box4 .box-container {
+    width: 387px;
+    height: 329px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.white-box-button {
+    border: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: 168px;
+    text-align: left;
+    padding: 0px;
+    height: 25px;
+
+}
+
+.white-box-content {
+    height: 100px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* box 5 */
+.box5 {
+    background-color: white;
     grid-area: 3/1/3/4;
+    width: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.box6{
-    background-color: burlywood;
+.box5 .box-container {
+    width: 387px;
+    height: 281px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box6 {
+    background-image: url(assets/home/desktop/designed-for-everyone.jpg);
     grid-area: 3/4/3/8;
+    width: 830px;
+
+}
+
+
+/*  bottom grid */
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    width: 1440px;
+    height: 500px;
+    color: white;
+}
+
+hr {
+    width: 280px;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+
+}
+
+.box7, .box8, .box9, .box10{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-size: cover;
+}
+
+/* box 7 */
+.box7 {
+    background-image: url(assets/stories/desktop/mountains.jpg);
+    background-size: cover;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)),url(assets/stories/desktop/mountains.jpg);
+}
+
+    .box-content {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-bottom: 40px;
+    }
+
+    .box-title{
+        height: 46px;
+    }
+
+
+
+.box8 {
+    background-image: url(assets/stories/desktop/cityscapes.jpg);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)),url(assets/stories/desktop/cityscapes.jpg);
+
+}
+
+.box9 {
+    background-image: url(assets/stories/desktop/18-days-voyage.jpg);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.486)),url(assets/stories/desktop/18-days-voyage.jpg);
+
+}
+
+.box10 {
+    background-image: url(assets/stories/desktop/architecturals.jpg);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)),url(assets/stories/desktop/architecturals.jpg);
+
+}
+
+
+
+/*  section skills */
+
+.skills img{
+    margin-bottom: 50px;
+}
+
+.skills{
+    height: 500px;
+    width: 1110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills div{
+    width: 350px;
+    height: 236px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills p{
+    display: flex;
+    align-self:last baseline;
+}
+
+.img{
+    padding-bottom: 36px;
 }
