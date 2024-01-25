@@ -106,9 +106,46 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 
+
+/* inside box elements */
+
+.home-sale-box{
+    width: 251px;
+    height: 52px;
+    background-color: rgba(34, 34, 59, 0.533);
+    border-radius: 5px;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 32px;
+    position: absolute;
+    top: 10;
+    left: 10;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 5px;
+}
+
+main .fav-heart{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 5;
+
+}
+
+.contact-icon{
+    position: absolute;
+    z-index: 2;
+    top: 11%;
+    right: 5;
+}
 
 
 /* footer */
