@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 40;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+h4 {
+    font-weight: 400;
+    font-family: 'Raleway';
+}
+
+/* header */
+
+header {
+    width: 1380px;
+    height: 135px;
+    background-color: #c9ada7ae;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: rgba(0, 0, 0, 0.46) 1px 3px 10px 0px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 692px;
+
+}
+
+.navbar a,
+.nav-button-and-fav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    letter-spacing: 5px;
+}
+
+
+.nav-button-and-fav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-button-and-fav button {
+    width: 200px;
+    height: 50px;
+    border: 1px rgba(255, 255, 255, 0.562) solid;
+    background-color: rgba(154, 140, 152, 0.5);
+}
+
+
+
+
+/* banner */
+
+.banner {
+    width: 1440px;
+    height: 572px;
+    background-image: url(img/banner.png);
+    background-size: cover;
+    margin-bottom: 30px;
+
+}
+
+
+
+/* main */
+
+/*  Sales */
+
+.sales-section {
+    display: grid;
+    justify-items: center;
+    width: 1440px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 30px;
+    margin-bottom: 100px;
+    /* background-color: red; */
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+    width: 416px;
+    height: 537px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+/* inside box elements */
+
+.home-sale-box{
+    width: 251px;
+    height: 52px;
+    background-color: rgba(34, 34, 59, 0.533);
+    border-radius: 5px;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 32px;
+    position: absolute;
+    top: 10;
+    left: 10;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 5px;
+}
+
+main .fav-heart{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 5;
+
+}
+
+.contact-icon{
+    position: absolute;
+    z-index: 2;
+    top: 11%;
+    right: 5;
+}
+
+
+/* footer */
+footer{
+    width: 1440px;
+    height: 298px;
+    background-color: #c9ada7ae;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

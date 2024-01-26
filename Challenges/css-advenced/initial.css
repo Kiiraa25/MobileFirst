@@ -1,0 +1,46 @@
+/*  ------------------------------------------------------------------------------------------------------------  */
+/*  Ne touche pas ce fichier, écrit ton CSS dans style.css  */
+/*  ------------------------------------------------------------------------------------------------------------  */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    background: brown;
+    margin: 10px;
+}
+
+.second-container {
+    width: 520px;
+    height: 320px;
+    background: cyan;
+}
+
+div {
+    width: 50px;
+    height: 50px;
+}
+
+.first {
+    background: red;
+}
+
+.second {
+    background: green;
+}
+
+.third {
+    background: pink;
+}
+
+.fourth {
+    background: orange;
+}
+
+/*  ------------------------------------------------------------------------------------------------------------  */
+/*  Ne touche pas ce fichier, écrit ton CSS dans style.css  */
+/*  ------------------------------------------------------------------------------------------------------------  */

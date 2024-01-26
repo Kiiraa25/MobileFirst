@@ -1,0 +1,547 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            height: 100vh;
+            width: 1440px;
+            position: absolute;
+            margin-left: calc((100% - 1440px)* 0.5);
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container{
+            width: 250px;
+        }
+    </style>
+    <title>Code CSS d'un carousel</title>
+</head>
+<body>
+    
+
+
+<div class="container">
+    .csslider1 {<br>
+        display: inline-block;<br>
+        position: relative;<br><br>
+        max-width: 830px;<br><br>
+        width: 100%;<br>
+        margin-top: 10px;<br>
+    }<br>
+    .csslider1 > .cs_anchor {<br>
+        display: none;<br>
+    }<br>
+    .csslider1 > ul {<br>
+        position: relative;<br>
+        z-index: 1;<br>
+        font-size: 0;<br>
+        line-height: 0;<br>
+        margin: 0 auto;<br>
+        padding: 0;<br>
+        overflow: hidden;<br>
+        white-space: nowrap;<br>
+    }<br>
+    .csslider1 > ul > div {<br>
+        width: 100%;<br>
+        visibility: hidden;<br>
+        font-size: 0px;<br>
+        line-height: 0;<br>
+    }<br>
+    .csslider1 > ul > li.img img {<br>
+        width: 100%;<br>
+    }<br>
+    .csslider1 > ul > li.img {<br>
+        font-size: 0pt;<br>
+    }<br>
+    .csslider1 > ul > li {<br>
+        position: relative;<br>
+        display: inline-block;<br>
+        width: 100%;<br>
+        height: 100%;<br>
+        overflow: hidden;<br>
+        font-size: 15px;<br>
+        font-size: initial;<br>
+        line-height: normal;<br>
+        white-space: normal;<br>
+        vertical-align: top;<br>
+        -webkit-box-sizing: border-box;<br>
+        -moz-box-sizing: border-box;<br>
+        box-sizing: border-box;<br>
+        -webkit-transform: translate3d(0,0,0);<br>
+        -moz-transform: translate3d(0,0,0);<br>
+        -ms-transform: translate3d(0,0,0);<br>
+        -o-transform: translate3d(0,0,0);<br>
+        transform: translate3d(0,0,0);<br>
+    }<br>
+    .csslider1 .cs_lnk{<br>
+        position: absolute;<br>
+        top: -9999px;<br>
+        left: -9999px;<br>
+        font-size: 0pt;<br>
+        opacity: 0;<br>
+        filter: alpha(opacity=0);<br>
+    }<br>
+    .csslider1 > ul > li.img,
+    .csslider1 > .cs_arrowprev,<br>
+    .csslider1 > .cs_arrownext,
+    .csslider1 > .cs_bullets,
+    .csslider1 > .cs_play_pause {<br>
+        -webkit-touch-callout: none;<br>
+        -webkit-user-select: none;<br>
+        -khtml-user-select: none;<br>
+        -moz-user-select: none;<br>
+        -ms-user-select: none;<br>
+        user-select: none;<br>
+    }<br>.csslider1 > .cs_arrowprev,<br>
+    .csslider1 > .cs_arrownext {<br>
+        position: absolute;<br>
+        top: 50%;<br>
+        -webkit-box-sizing: content-box;<br>
+        -moz-box-sizing: content-box;<br>
+        box-sizing: content-box;<br>
+        z-index: 5;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev > label,<br>
+    .csslider1 > .cs_arrownext > label {<br>
+        position: absolute;<br>
+        text-decoration: none;<br>
+        cursor: pointer;<br>
+        opacity: 0;<br>
+        z-index: -1;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev {<br>
+        left: 0;<br>
+    }<br>
+    .csslider1 > .cs_arrownext {<br>
+        right: 0;<br>
+    }<br>
+    .csslider1 > .slide:checked ~ .cs_arrowprev > label,<br>
+    .csslider1 > .slide:checked ~ .cs_arrownext > label {<br>
+        opacity: 0;<br>
+        z-index: -1;<br>
+    }<br>
+    .csslider1 > #cs_slide1_0:checked ~ .cs_arrowprev > label.num2,<br>
+    .csslider1 > #cs_pause1_0:checked ~ .cs_arrowprev > label.num2,<br>
+    .csslider1 > #cs_slide1_0:checked ~ .cs_arrownext > label.num1,<br>
+    .csslider1 > #cs_pause1_0:checked ~ .cs_arrownext > label.num1,<br>
+    .csslider1 > #cs_slide1_1:checked ~ .cs_arrowprev > label.num0,<br>
+    .csslider1 > #cs_pause1_1:checked ~ .cs_arrowprev > label.num0,<br>
+    .csslider1 > #cs_slide1_1:checked ~ .cs_arrownext > label.num2,<br>
+    .csslider1 > #cs_pause1_1:checked ~ .cs_arrownext > label.num2,<br>
+    .csslider1 > #cs_slide1_2:checked ~ .cs_arrowprev > label.num1,<br>
+    .csslider1 > #cs_pause1_2:checked ~ .cs_arrowprev > label.num1,<br>
+    .csslider1 > #cs_slide1_2:checked ~ .cs_arrownext > label.num0,<br>
+    .csslider1 > #cs_pause1_2:checked ~ .cs_arrownext > label.num0 {<br>
+        opacity: 1;<br>
+        z-index: 5;<br>
+    }<br>
+    @-webkit-keyframes arrow {<br>
+        0%, 33.32333333333334% {<br> opacity: 1;<br> z-index: 5;<br> }<br>
+        33.333333333333336%, 100%	{<br> opacity: 0;<br> z-index: -1;<br> }<br>
+    }<br>
+    @-moz-keyframes arrow {<br>
+        0%, 33.32333333333334% {<br> opacity: 1;<br> z-index: 5;<br> }<br>
+        33.333333333333336%, 100%	{<br> opacity: 0;<br> z-index: -1;<br> }<br>
+    }<br>
+    @keyframes arrow {<br>
+        0%, 33.32333333333334% {<br> opacity: 1;<br> z-index: 5;<br> }<br>
+        33.333333333333336%, 100%	{<br> opacity: 0;<br> z-index: -1;<br> }<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num2,<br>
+    .csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num1 {<br>
+        -webkit-animation: arrow 12300ms infinite -1000ms;<br>
+        -moz-animation: arrow 12300ms infinite -1000ms;<br>
+        animation: arrow 12300ms infinite -1000ms;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num0,<br>
+    .csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num2 {<br>
+        -webkit-animation: arrow 12300ms infinite 3100ms;<br>
+        -moz-animation: arrow 12300ms infinite 3100ms;<br>
+        animation: arrow 12300ms infinite 3100ms;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_arrowprev > label.num1,<br>
+    .csslider1 > #cs_play1:checked ~ .cs_arrownext > label.num0 {<br>
+        -webkit-animation: arrow 12300ms infinite 7200ms;<br>
+        -moz-animation: arrow 12300ms infinite 7200ms;<br>
+        animation: arrow 12300ms infinite 7200ms;<br>
+    }<br>
+    .csslider1 > .slide:checked ~ .cs_arrowprev > label,<br>
+    .csslider1 > .slide:checked ~ .cs_arrownext > label,<br>
+    .csslider1 > .pause:checked ~ .cs_arrowprev > label,<br>
+    .csslider1 > .pause:checked ~ .cs_arrownext > label {<br>
+        -webkit-animation: none;<br>
+        -moz-animation: none;<br>
+        -ms-animation: none;<br>
+        -o-animation: none;<br>
+        animation: none;<br>
+    }<br>
+    .csslider1 > .cs_bullets {<br>
+        position: absolute;<br>
+        left: 0;<br>
+        width: 100%;<br>
+        z-index: 6;<br>
+        font-size: 0;<br>
+        line-height: 8pt;<br>
+        text-align: center;<br>
+    }<br>
+    .csslider1 > .cs_bullets > div {<br>
+        margin-left: -50%;<br>
+        width: 100%;<br>
+    }<br>
+    .csslider1 > .cs_bullets > label {<br>
+        position: relative;<br>
+        display: inline-block;<br>
+        cursor: pointer;<br>
+    }<br>
+    .csslider1 > .cs_bullets > label > .cs_thumb {<br>
+        visibility: hidden;<br>
+        position: absolute;<br>
+        opacity: 0;<br>
+        z-index: 1;<br>
+        line-height: 0;<br>
+        left: -55px;<br>
+        top: -48px;<br>
+    }<br>
+    .csslider1 > .cs_bullets > label > .cs_thumb > img {<br>
+        max-width: none;<br>
+    }<br>
+    .csslider1.cs_handle {<br>
+        cursor: -webkit-grab;<br>
+        cursor: -moz-grab;<br>
+        cursor: url("data:image/png;<br>base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAABwSURBVEjH7ZJBEsAgCAMT/v/n9NCOSqe2oD2yNx1JggB4BCEFWyFASP2KMQE7ywWhe/tTRGCGogLk02tFctiW/SUgaMyQG4PdPzDn31rQbMb8FiAXgvsEJNax1yVlVGAjA93apP3HFhZTGIqiKH7iADB6HxPlHdNVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA3LTA3VDEzOjQ5OjEwKzAyOjAwm7WiFAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNy0wN1QxMzo0OToxMCswMjowMOroGqgAAAAASUVORK5CYII="), move;<br>
+    }<br>
+    .csslider1.cs_handle.cs_grab {<br>
+        cursor: -webkit-grabbing;<br>
+        cursor: -moz-grabbing;<br>
+        cursor: url("data:image/png;<br>base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAABaSURBVEjH7ZMxCkAhDEOT8u9/5TpJ+xWkFse8IYutJgEB8RCHL1qCc90BEFnT6QH7mwgFHBUf8wJyS1TDLuc3vmighx37LZdIth3E5hKj9n6O0HRh+oJCiFcMxRUUDxR1CTMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTQtMDctMDdUMTM6NDk6MzgrMDI6MDDqf+sOAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE0LTA3LTA3VDEzOjQ5OjM4KzAyOjAwmyJTsgAAAABJRU5ErkJggg=="), move;<br>
+    }<br>
+    .csslider1 > ul > li.num0 {<br>
+        left: 0%;<br>
+    }<br>
+    .csslider1 > ul > li.num1 {<br>
+        left: 100%;<br>
+    }<br>
+    .csslider1 > ul > li.num2 {<br>
+        left: 200%;<br>
+    }<br>
+    .csslider1 > #cs_slide1_0:checked ~ ul > li,<br>
+    .csslider1 > #cs_pause1_0:checked ~ ul > li {<br>
+        -webkit-transform: translateX(0%);<br>
+        -moz-transform: translateX(0%);<br>
+        transform: translateX(0%);<br>
+    }<br>
+    .csslider1 > #cs_slide1_1:checked ~ ul > li,<br>
+    .csslider1 > #cs_pause1_1:checked ~ ul > li {<br>
+        -webkit-transform: translateX(-100%);<br>
+        -moz-transform: translateX(-100%);<br>
+        transform: translateX(-100%);<br>
+    }<br>
+    .csslider1 > #cs_slide1_2:checked ~ ul > li,<br>
+    .csslider1 > #cs_pause1_2:checked ~ ul > li {<br>
+        -webkit-transform: translateX(-200%);<br>
+        -moz-transform: translateX(-200%);<br>
+        transform: translateX(-200%);<br>
+    }<br>
+    .csslider1 > ul > li {<br>
+        position: absolute;<br>
+        top: 0;<br>
+        left: 0;<br>
+        display: inline-block;<br>
+        opacity: 1;<br>
+        -webkit-transition: -webkit-transform 1000ms;<br>
+        -moz-transition: -moz-transform 1000ms;<br>
+        transition: transform 1000ms;<br>
+        -webkit-transform: scale(1);<br>
+        -moz-transform: scale(1);<br>
+        transform: scale(1);<br>
+    }<br>
+    @-webkit-keyframes slide {<br>
+        0%, 25.203252032520325%	{<br> -webkit-transform: translateX(0%);<br> }<br>
+        33.333333333333336%, 58.53658536585366%	{<br> -webkit-transform: translateX(-100%);<br> }<br>
+        66.66666666666667%, 91.869918699187%	{<br> -webkit-transform: translateX(-200%);<br> }<br>
+    }<br>
+    @-moz-keyframes slide {<br>
+        0%, 25.203252032520325%	{<br> -moz-transform: translateX(0%);<br> }<br>
+        33.333333333333336%, 58.53658536585366%	{<br> -moz-transform: translateX(-100%);<br> }<br>
+        66.66666666666667%, 91.869918699187%	{<br> -moz-transform: translateX(-200%);<br> }<br>
+    }<br>
+    @keyframes slide {<br>
+        0%, 25.203252032520325%	{<br> transform: translateX(0%);<br> }<br>
+        33.333333333333336%, 58.53658536585366%	{<br> transform: translateX(-100%);<br> }<br>
+        66.66666666666667%, 91.869918699187%	{<br> transform: translateX(-200%);<br> }<br>
+    }<br>
+    .csslider1  > #cs_play1:checked ~ ul > li {<br>
+        -webkit-animation: slide 12300ms infinite;<br>
+        -moz-animation: slide 12300ms infinite;<br>
+        animation: slide 12300ms infinite;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ ul > li,<br>
+    .csslider1 > .pause:checked ~ ul > li {<br>
+        -webkit-transition: none;<br>
+        -moz-transition: none;<br>
+        transition: none;<br>
+    }<br>
+    /* /calculate autoplay */
+    .csslider1 > .cs_arrowprev,<br>
+    .csslider1 > .cs_arrownext {<br>
+        top: 0;<br>
+        bottom: 0;<br>
+        width: 15%;<br>
+        opacity: .5;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev:hover,
+    .csslider1 > .cs_arrownext:hover {<br>
+        opacity: .9;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev {<br>
+        left: 0;<br>
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.0001) 100%);<br>
+        background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.0001) 100%);<br>
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);<br>
+        background-repeat: repeat-x;<br>
+    }<br>
+    .csslider1 > .cs_arrownext {<br>
+        right: 0;<br>
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.0001) 0, rgba(0,0,0,0.5) 100%);<br>
+        background-image: linear-gradient(to right, rgba(0,0,0,0.0001) 0, rgba(0,0,0,0.5) 100%);<br>
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);<br>
+        background-repeat: repeat-x;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev > label,<br>
+    .csslider1 > .cs_arrownext > label {<br>
+        top: 0;<br>
+        left: 0;<br>
+        bottom: 0;<br>
+        width: 100%;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev > label span,
+    .csslider1 > .cs_arrownext > label span {<br>
+        display: block;<br>
+        position: absolute;<br>
+        width: 100%;<br>
+        height: 100%;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev > label span {<br>
+        float: left;<br>
+    }<br>
+    .csslider1 > .cs_arrownext > label span {<br>
+        float: right;<br>
+    }<br>
+    .csslider1 > .cs_arrowprev > label span:after,
+    .csslider1 > .cs_arrownext > label span:after {<br>
+        display: block;<br>
+        position: absolute;<br>
+        width: 30px;<br>
+        height:30px;<br>
+        top: 50%;<br>
+        margin-top: -23px;<br>
+        color: #fff;<br>
+        text-align: center;<br>
+        content:'';<br>
+    }<br>
+    .csslider1 > .cs_arrowprev > label span:after {<br>
+        background: url('data:image/png;<br>base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACQElEQVR4Xu3av0vDQBQH8Hf5f6zgoGPR1aG5w3/A3clfgwiKdvDH4OTuLu2jU6Ggg4u71dXFUSehUBxycoUUKSpp3l1yL7nOScj3c+9+0DwBNf+JmueHABAqoOYCYQrUvADCIujVFJBSNoUQO0mSLAohPgDgbjwet/v9/qerSvUFQEgp2wBw8EvQtyRJ1nu93tAFgg8AIo7jSzPy/wQ01bCKiM+2EcoGyBI+zfw6Go0ag8FgZBOhTIB5wqeZTxDxqAoAecKb3A+I2OQOkDe8yT1ExAZnAEp4EELcdLvdTa4ApPAA8BVF0VKn03nhCEANbzJvIeK1zfDmWUXsAjbCbyPile3wRQB4Hd41gPfhXQKwCO8KgE14FwCswtsGYBfeJgDL8LYA2Ia3AcA6PBlAKXWqtT4knNCcnfCyvlPuo3Cr1VqJouiRcJwuPTypAqSUtwCwkVV65jovwlMBngBgIQeAN+EDAGH+Qu2nQBzHy0IIswhGOaaBucWLqZB7FzAJlFLHWmvK39SlI5AAzBRSSp1prfdzVkHplUAFmCyknBFsALBGsAXAFsEmwARBSnkOAHtc1gTbAOwQXACwQnAFwAbBJQALBNcAKcIFAOz6uDAWAWALge3H0XTgzRZJqQTWn8etIHBvkJgiZGiL+2u5YN8iQ0WoRJMUBaEybXJ5ECrXKDkPwjsArFWxVfbn7lDbZunpij/TLm9G/b4u7fKEUzLt1qKOwrS3dHh3AHCIy+LRoQJYDJPDlwwV4BCXxaO/AX9kJlA2PGQzAAAAAElFTkSuQmCC');<br>
+        background-size:100% auto;<br>
+    }<br>
+    .csslider1 > .cs_arrownext > label span:after {<br>
+        background: url('data:image/png;<br>base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACbElEQVR4Xu3av2sUQRQH8O9biFwhNrG0sBYTi0BAsNHuqrvHcY1i/gQrG2NE0USF2PgnaKHVzbtCW5uonfEX/jfnnSxcQETkZnbezBt3t54d9vvZN7PHzSO0/KKW50cH0FVAywW6JdDyAug2QdUl0O/3z/R6vXsArgFYB/AFwDMReW+l8tQAmPkSgDcAzv0Rdk5Ej5xzDywgqAAMBoONqqreATj7j5BPReROboToAOPx+PRsNvsO4PwK4bIjRAdg5n0Ad1cIfzIkK4IGwBGAKx4A9dBsCBoA3wBseAJkQ9AAeAFgJwAgC4IGwEUAnwCcKgEhOkAdmplvAXgeCJC0ElQAlgi3ARxaR1ADKAVBFaAEBHUA6whJACwjJAOwipAUwCJCcgBrCFkALCFkA7CCkBUgEsJ9EXkY+oszO0AEhJ9EtO2cOw5BMAEQAeG1iFwvGqAhwrGIbHUAAQL/xRJYLBavptPpjYD8No7GmLnJfwezqqq2J5PJ5yIBGoavM++JyEFI+PqerEugaXgi2nfO1WePwVc2AAvhs1WAlfBZACyFTw7QNDyAAxHZC17wf7kx2R5gMXyyCrAaPgmA5fDqANbDqwJECP9YRHwaLYL2RpVNMMLhaJLwKhWwbJCqj8fXgl4JkCy8CsBwOHxJRDdLCK8CwMw/AFzwBSCiJ865Xd/7mo6Pvgcw80cAl30eLFd4rQrwapPLGV4FwKdRMnd4FYB60lVaZS2EVwOoJx6NRpvz+fxtK5ulTzbA39rlry7b5b8S0aFz7oPPJqk5NvpXQPNhNebuADRUS5qzq4CS3pbGs3YVoKFa0pytr4Bf9TICUGmBTvkAAAAASUVORK5CYII=');<br>
+        background-size:100% auto;<br>
+    }<br>
+    .csslider1 > .cs_bullets {<br>
+        bottom: 20px;<br>
+        width: 70%;<br>
+        left: 15%;<br>
+    }<br>
+    .csslider1 > .cs_bullets > label {<br>
+        margin: 0 2px;<br>
+        padding: 5px;<br>
+        border-radius: 50%;<br>
+        background: transparent;<br>
+        -webkit-box-shadow: inset 0 0 0 1px #fff;<br>
+        box-shadow: inset 0 0 0 1px #fff;<br>
+    }<br>
+    .csslider1 > .cs_bullets > label > .cs_thumb {<br>
+        border: 3px solid #fff;<br>
+        margin-top: -13px;<br>
+        -webkit-transition: opacity .3s, visibility .3s;<br>
+        -moz-transition: opacity .3s, visibility .3s;<br>
+        transition: opacity .3s, visibility .3s;<br>
+    }<br>
+    .csslider1 > .cs_bullets > label > .cs_thumb:before {<br>
+        content: '';<br>
+        position: absolute;<br>
+        width: 0;<br>
+        height: 0;<br>
+        left: 50%;<br>
+        margin-left: -5px;<br>
+        bottom: -10px;<br>
+        border-left: 7px solid transparent;<br>
+        border-right: 7px solid transparent;<br>
+        border-top: 7px solid #fff;<br>
+    }<br>
+    .csslider1 > .cs_bullets > label:hover > .cs_thumb {<br>
+        opacity: 1;<br>
+        visibility: visible;<br>
+    }<br>
+    .csslider1 > #cs_slide1_0:checked ~ .cs_bullets > label.num0,<br>
+    .csslider1 > #cs_pause1_0:checked ~ .cs_bullets > label.num0,<br>
+    .csslider1 > #cs_slide1_1:checked ~ .cs_bullets > label.num1,<br>
+    .csslider1 > #cs_pause1_1:checked ~ .cs_bullets > label.num1,<br>
+    .csslider1 > #cs_slide1_2:checked ~ .cs_bullets > label.num2,<br>
+    .csslider1 > #cs_pause1_2:checked ~ .cs_bullets > label.num2 {<br>
+        background: #fff;<br>
+        padding: 6px;<br>
+        -webkit-box-shadow: none;<br>
+        box-shadow: none;<br>
+    }<br>
+    @-webkit-keyframes bullet {<br>
+        0%, 33.32333333333334%	{<br>
+            -webkit-box-shadow: none;<br>
+            background: #fff;<br>
+            padding: 6px;<br>
+        }<br>
+        33.333333333333336%, 100% {<br>
+            -webkit-box-shadow: inset 0 0 0 1px #fff;<br>
+            background: transparent;<br>
+            padding: 5px;<br>
+            margin-bottom: 0;<br>
+        }<br>
+    }<br>
+    @-moz-keyframes bullet {<br>
+        0%, 33.32333333333334%	{<br>
+            -moz-box-shadow: none;<br>
+            background: #fff;<br>
+            padding: 6px;<br>
+        }<br>
+        33.333333333333336%, 100% {<br>
+            -moz-box-shadow: inset 0 0 0 1px #fff;<br>
+            background: transparent;<br>
+            padding: 5px;<br>
+            margin-bottom: 0;<br>
+        }<br>
+    }<br>
+    @keyframes bullet {<br>
+        0%, 33.32333333333334%	{<br>
+            box-shadow: none;<br>
+            background: #fff;<br>
+            padding: 6px;<br>
+        }<br>
+        33.333333333333336%, 100% {<br>
+            box-shadow: inset 0 0 0 1px #fff;<br>
+            background: transparent;<br>
+            padding: 5px;<br>
+            margin-bottom: 0;<br>
+        }<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_bullets > label.num0 {<br>
+        -webkit-animation: bullet 12300ms infinite -1000ms;<br>
+        -moz-animation: bullet 12300ms infinite -1000ms;<br>
+        animation: bullet 12300ms infinite -1000ms;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_bullets > label.num1 {<br>
+        -webkit-animation: bullet 12300ms infinite 3100ms;<br>
+        -moz-animation: bullet 12300ms infinite 3100ms;<br>
+        animation: bullet 12300ms infinite 3100ms;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_bullets > label.num2 {<br>
+        -webkit-animation: bullet 12300ms infinite 7200ms;<br>
+        -moz-animation: bullet 12300ms infinite 7200ms;<br>
+        animation: bullet 12300ms infinite 7200ms;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_bullets > label > .cs_point,
+    .csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {<br>
+        -webkit-transition: none;<br>
+        -moz-transition: none;<br>
+        transition: none;<br>
+    }<br>
+    .csslider1 > .slide:checked ~ .cs_bullets > label > .cs_point,
+    .csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {<br>
+        -webkit-animation: none;<br>
+        -moz-animation: none;<br>
+        -ms-animation: none;<br>
+        -o-animation: none;<br>
+        animation: none;<br>
+    }<br>
+    /* ------------- Play ------------- */
+    .csslider1 > .cs_play_pause{<br>display:block;<br>}<br>
+    .csslider1 > .cs_play_pause {<br>
+      position: absolute;<br>
+      bottom: 0;<br>
+      right: 0;<br>
+      z-index: 5;<br>
+    }<br>
+    .csslider1 > .cs_play_pause > label {<br>
+      cursor: pointer;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause,
+    .csslider1 > .slide:checked ~ .cs_play_pause > .cs_play,
+    .csslider1 > .pause:checked ~ .cs_play_pause > .cs_play {<br>
+      display: block;<br>
+      z-index: 5;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_play,
+    .csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
+    .csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {<br>
+      display: none;<br>
+      z-index: -1;<br>
+    }<br>
+    @-webkit-keyframes pauseChange {<br>
+      0%, 33.32333333333334% {<br> opacity: 1;<br> z-index: 5;<br> }<br>
+      33.333333333333336%, 100%  {<br> opacity: 0;<br> z-index: -1;<br> }<br>
+    }<br>
+    @keyframes pauseChange {<br>
+      0%, 33.32333333333334% {<br> opacity: 1;<br> z-index: 5;<br> }<br>
+      33.333333333333336%, 100%  {<br> opacity: 0;<br> z-index: -1;<br> }<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num0 {<br>
+      opacity: 0;<br>
+      z-index: -1;<br>
+      -webkit-animation: pauseChange 10800ms infinite -1900ms;<br>
+      animation: pauseChange 10800ms infinite -1900ms;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_play_pause{<br>display:none;<br>}<br>
+    .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num1 {<br>
+      opacity: 0;<br>
+      z-index: -1;<br>
+      -webkit-animation: pauseChange 10800ms infinite 1700ms;<br>
+      animation: pauseChange 10800ms infinite 1700ms;<br>
+    }<br>
+    .csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num2 {<br>
+      opacity: 0;<br>
+      z-index: -1;<br>
+      -webkit-animation: pauseChange 10800ms infinite 5300ms;<br>
+      animation: pauseChange 10800ms infinite 5300ms;<br>
+    }<br>
+    .csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
+    .csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {<br>
+      -webkit-animation: none;<br>
+      animation: none;<br>
+    }<br>
+    /* ------------- Play Pause CSS ------------- */
+    .csslider1{<br>position:relative}<br>
+    .csslider1 > .slide:checked ~ .cs_play_pause > .cs_play{<br>
+        display: block;<br>
+        background: rgba(0,0,0,0.5);<br>
+        z-index: 5;<br>
+        color: #fff;<br>
+        padding: 5px;<br>
+        font-family: arial;<br>
+        font-size: 9px;<br>
+    }<br>
+    .csslider1 > .slide:checked ~ .cs_play_pause > .cs_play:hover{<br> background: rgba(0,0,0,1);<br>}<br>
+    .csslider1 > .cs_play_pause {<br>
+        position: absolute;<br>
+        bottom: 0;<br>
+        z-index: 5;<br>
+        margin-right: 0;<br>
+        z-index: 111;<br>
+    }<br>
+
+</div>
+
+</body>
+</html>

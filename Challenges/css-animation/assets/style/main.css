@@ -1,0 +1,107 @@
+
+.container-black{
+    position: relative;
+}
+.square-red {
+    position: absolute;
+    animation-name: square-red-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes square-red-animation {
+    0% {
+        left: 0%;
+        top: 0%;
+    }
+
+    25%{
+        left: calc(100% - 50px);
+        top: 0%;
+    }
+
+    50%{
+        left: calc(100% - 50px);
+        top: calc(100% - 50px);
+    }
+
+
+    75%{
+        left: 0%;
+        top: calc(100% - 50px);
+    }
+
+    100% {
+        left: 0%;
+        top: 0%;
+    }
+
+}
+
+
+
+    /* animation 2 */
+    .container-pink {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .container-pink:hover .square-green {
+        animation-name: square-green-animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    .square-green{
+        position: absolute;
+        top: calc(250px * 0.5);
+        left: calc(250px * 0.5);
+    }
+
+
+    @keyframes square-green-animation {
+
+    0%{
+        transform: rotate(0turn);
+        transform: scale(0);
+    }
+
+    25%{
+        transform: scale(6) rotate(2turn);
+    }
+
+    50%{
+        /* transform: rotate(3turn); */
+    }
+
+    }
+
+
+    /* animation 3 */
+
+    #spinner{
+        animation-name: spinner-animation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spinner-animation {
+        0%{
+            transform: rotate(360deg);
+        }
+
+        100%{
+            rotate: 720deg;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
